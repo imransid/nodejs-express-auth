@@ -30,7 +30,17 @@ app.use(bodyParser.urlencoded({extended: false}))
 // set static path
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.get('/', (req, res) => {
+// app.get('/', (req, res) => {
+//     res.render('index', {
+//         name: 'Imran Khan',
+//         email: 'emailofimran1992@gmail.com',
+//         number: 1754099405  
+//     });
+// });
+
+
+// For hosted Apache server
+app.get('/index.php', (req, res) => {
     res.render('index', {
         name: 'Imran Khan',
         email: 'emailofimran1992@gmail.com',
